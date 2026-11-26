@@ -17,7 +17,7 @@
 <meta name="copyright" content="© 2026 張博鈞，僅供非營利教育與實務使用">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>先接住，再處理</title>
-<meta name="description" content="孩子的性影像被散布、被威脅時，家長的下一步行動指引">
+<meta name="description" content="孩子的性影像被散布、被威脅，或家長覺得哪裡怪怪的時，下一步的行動指引">
 <style>
 :root{
   --bg:#f6f3ee; --card:#ffffff; --ink:#2b2a28; --muted:#6b675f; --line:#e4ded3;
@@ -134,6 +134,20 @@ details ul{padding-left:20px}
 .bad{background:var(--dont-soft); border-left:3px solid var(--dont); border-radius:0 10px 10px 0; padding:10px 14px; margin:8px 0; font-size:15px}
 .bad p{margin:4px 0}
 .linkbtn{display:block; width:100%; text-align:left; font:inherit; font-weight:700; color:var(--accent); background:var(--accent-soft); border:0; border-radius:12px; padding:14px 16px; cursor:pointer; margin-bottom:16px}
+.tbc{background:#ffe66d; color:#3a2f00; padding:0 4px; border-radius:4px; font-weight:700}
+ul.chk{list-style:none; margin:0 0 6px; padding:0}
+ul.chk li{display:flex; gap:12px; padding:8px 0; border-top:1px solid var(--line)}
+ul.chk li:first-child{border-top:0}
+ul.chk input{width:22px; height:22px; margin-top:4px; accent-color:var(--accent); flex:none}
+ul.chk .txt{font-size:16px; line-height:1.65}
+ul.chk li.done .txt{font-weight:700}
+.gl{font-size:14px; font-weight:700; color:var(--muted); margin:10px 0 0}
+.sn{display:inline-block; min-width:22px; height:22px; line-height:22px; padding:0 3px; text-align:center; background:var(--accent); color:var(--accent-ink); border-radius:11px; font-size:13px; margin-right:8px}
+.cnt{color:var(--warn); font-weight:700; font-size:14px}
+.gsum{background:var(--accent-soft); border-radius:14px; padding:14px 16px; margin-bottom:16px}
+.gsum.hot{background:var(--warn-soft); border:1.5px solid var(--warn)}
+.gsum p{margin:0 0 8px}
+.gsum p:last-child{margin-bottom:0}
 @media print{
   .top,.nav,.exit,.progress,.no-print{display:none!important}
   body{background:#fff; color:#000; font-size:13px}
@@ -300,7 +314,149 @@ var N = {
       "用處罰或斷網逼孩子說出來",
       "在孩子面前跟其他大人討論這件事"
     ],
+    extra:[
+      {h:"怎麼問，而不是審問",
+       list:["挑孩子放鬆的時候，並肩做事比面對面坐下來容易開口",
+             "先說你的立場，再問一個開放的問題",
+             "不要把答案放在問題裡，例如不要問「他是不是碰你」「你是不是傳照片了」",
+             "孩子說多少就聽多少，不追問細節",
+             "孩子不想說就停，留一句話給他"],
+       say:["「最近有沒有遇到什麼讓你不舒服、或不知道怎麼辦的事？」",
+            "「好，我們先不談。你想說的時候，隨時都可以。」"]},
+      {h:"孩子突然開口時",
+       p:["先穩住表情和語氣，聽完再說："],
+       say:["「謝謝你告訴我，我相信你。」","「這不是你的錯。」"],
+       p2:"孩子可能說一半就停，或隔天改口。多半是害怕，不代表說謊。"}
+    ],
+    more:[
+      {go:"comm", t:"溝通技巧完整版：怎麼問、怎麼接、好秘密與壞秘密 →"},
+      {go:"groom", t:"覺得有人在接近孩子？看性誘騙的警訊 →"}
+    ],
     res:["siarc","siarcChat","w885","r113"]
+  },
+
+  /* ===== 覺得怪怪的但還沒發生：性誘騙警訊 ===== */
+  groom:{
+    type:"groom", tag:"留意警訊", title:"覺得怪怪的，但還沒發生",
+    lead:"有人對孩子特別好、特別黏，或孩子的行為讓你不安，卻說不出哪裡不對。這一頁幫你看懂：這可能是性誘騙的哪個階段，現在可以做什麼。",
+    define:[
+      "性誘騙（grooming）是一段過程，不是一次騙局。對方通常一步一步來：先接近、取得信任，再讓孩子習慣越界的話題與碰觸，最後讓孩子不敢說。",
+      "每一步單獨看，常像是關心、陪伴或玩笑，所以孩子很難察覺，大人也常被騙過，連家長都可能被對方的好印象說服。",
+      "孩子不是笨，也不是不小心。對方是有計畫地在做，錯在對方。",
+      "警訊不等於一定出事，也不一定照順序出現，網路上的進度可能很快。重點看「組合」，以及對方有沒有要孩子保密。"
+    ],
+    stages:[
+      {n:"1", h:"挑選孩子",
+       d:"對方先觀察誰比較容易接近，例如比較孤單、缺乏自信、很聽大人話、少人陪伴的孩子。所有孩子都可能被挑上，這不代表孩子或家庭有問題。這個階段多半看不到警訊，能做的是讓孩子身邊有人聽他說話。",
+       real:[["有大人特別留意孩子，常找理由出現在孩子身邊"]],
+       net:[["不認識的帳號持續稱讚孩子、按讚留言，或主動私訊搭話"]]},
+      {n:"2", h:"接近並孤立",
+       d:"對方想辦法和孩子單獨相處，減少其他大人在場，也讓兩個人的對話只有彼此知道。",
+       real:[["想單獨帶孩子出去、過夜，常說「我來幫忙帶」「我順便接送」"],
+             ["活動中把其他大人排開，或總挑沒人看得到的時間和地點"]],
+       net:[["要孩子把聊天換到另一個 App 或私訊平台"],
+            ["要孩子刪掉對話，或使用訊息會自動消失的功能",1]]},
+      {n:"3", h:"建立信任",
+       d:"對方成為孩子口中「最懂我的人」：會稱讚、陪伴、偏心，也送東西，同時讓家長覺得他很可靠。",
+       real:[["對孩子特別好、特別偏心，孩子說「只有他懂我」「他把我當大人」"],
+             ["常送禮物、零食、錢，或給孩子其他人沒有的特權"],
+             ["在大人面前很熱心、很討人喜歡，讓你很難想到他會有問題"]],
+       net:[["送遊戲點數、裝備、禮物卡，或幫孩子儲值付費"],
+            ["每天固定時間聊很久，孩子常提到一位很談得來的網友"]]},
+      {n:"4", h:"習慣性話題與碰觸",
+       d:"對方一步一步讓孩子習慣性的話題和身體接觸，讓越界看起來很普通。",
+       real:[["對孩子開黃腔，或以「教你性知識」為名談性",1],
+             ["常有「不小心」的碰觸、搔癢、摟抱，而且越來越多",1],
+             ["在孩子面前暴露身體、看孩子換衣服，或給孩子看色情內容",1]],
+       net:[["聊天轉向身材、外貌、性話題，或傳色情圖片、影片給孩子",1],
+            ["要求視訊、自拍或更私密的照片，或說「你先傳我才傳」",1]]},
+      {n:"5", h:"讓孩子不敢說",
+       d:"事情發生後，對方要確保孩子不說出口，也常把責任推到孩子身上。出現這一階段的跡象，代表可能已經有越界的事發生。",
+       real:[["要孩子保守「我們之間的小秘密」",1],
+             ["一邊說「我愛你」「你很特別」，一邊用禮物、金錢收買",1],
+             ["讓孩子覺得「是你自己要的」「你也有責任」",1],
+             ["說「說出去你會被罵、爸媽會分開、你會被帶走」，或用傷害、處罰威脅",1]],
+       net:[["以公開影像或對話威脅，或要孩子付錢、買點數",1]]},
+      {n:"孩", h:"孩子身上的變化",
+       d:"這些變化不一定和性誘騙有關，青少年想要隱私也很正常。重點是「突然出現」，以及「好幾項一起出現」。",
+       real:[["突然有來路不明的禮物、點數、金錢，或不明的儲值、轉帳紀錄"],
+             ["提到「秘密」「只有我們知道」，或說出模糊、奇怪的話，例如特別的遊戲、大人的事"],
+             ["手機一響就緊張、立刻蓋住螢幕，或特別維護某個人"],
+             ["說出超出年紀的性用語或性知識"],
+             ["睡眠、食慾、情緒明顯改變，變得很安靜或很黏人，或不想去某個地方、見某個人"]]}
+    ],
+    steps:[
+      ["先不質問，也不要讓對方知道你發現了","孩子可能還信任對方，被逼問時會替對方說話，或把訊息藏起來。對方一旦知道，也可能刪帳號、換帳號或加強威脅。先把情況看清楚。"],
+      ["保全證據：截圖「頁面資訊」","截下對方的帳號名稱、帳號 ID、個人頁網址、對話與時間。截圖以帳號、對話和時間為主，不另存、下載或轉傳影像本身。保全完成前，不刪對話、不刪帳號。"],
+      ["找安靜的時間，先表明立場再開口","用「問而不審問」的方式談，不責怪、不沒收手機。下方有說法可以參考。"],
+      ["調整環境，不是處罰孩子","一起把帳號改為不公開、關閉陌生人私訊，裝置盡量在客廳等公共空間使用。檢查有沒有不明的點數、儲值、禮物卡或轉帳紀錄。"],
+      ["打給專業人員一起判斷","不確定算不算、要不要報案，可以先打 113 或向性影像處理中心諮詢，由專業人員協助判斷下一步。"],
+      ["對方是學校、補習班、社團等機構裡的成人","先不要自己找對方理論。可以先打 113 或向性影像處理中心諮詢，了解通報與申訴的方式。"],
+      ["孩子已經傳過影像，或被威脅","改看對應的行動指引，不用等這一頁全部做完。"]
+    ],
+    dont:[
+      "直接衝去找對方理論，或在網路上公開喊話",
+      "逼問孩子、翻手機、沒收手機當處罰，孩子只會藏得更深",
+      "證據還沒保全就封鎖、刪除對話或帳號",
+      "責怪孩子「怎麼這麼好騙」",
+      "因為對方是熟人、口碑很好，就把警訊壓下來"
+    ],
+    more:[
+      {go:"comm", t:"怎麼問而不審問、孩子開口怎麼回應、好秘密與壞秘密 →"},
+      {go:"type", t:"已經有影像被傳出，或被威脅：看行動指引 →"}
+    ],
+    res:["r113","siarc","w885","r110"]
+  },
+
+  /* ===== 溝通技巧 ===== */
+  comm:{
+    type:"guide", tag:"溝通技巧", title:"怎麼問、怎麼接：和孩子談難開口的事",
+    lead:"孩子願不願意說，常取決於你第一次的反應。這一頁整理三件事：怎麼問而不審問、孩子開口時怎麼接、好秘密與壞秘密怎麼分。",
+    secs:[
+      {h:"怎麼問，而不是審問",
+       p:["審問會讓孩子覺得自己做錯事，反而把門關上。目標是讓孩子願意開口，不是一次問出全部。"],
+       list:["挑孩子放鬆的時候，並肩做事（散步、坐車、吃宵夜、打遊戲）比面對面坐下來容易開口",
+             "你自己的情緒先穩住。太生氣或太緊張，就先等一下",
+             "先說你的立場，再問問題",
+             "用開放的問法，讓孩子用自己的話說，不要把答案放在問題裡",
+             "一次問一個，說多少就聽多少。細節交給專業人員，不用讓孩子反覆講",
+             "孩子不想說就停，留一句話給他"],
+       say:["「我最近有點擔心你，不是要罵你。不管是什麼事，我都想幫你。」",
+            "「你最近有沒有遇到什麼讓你不舒服、或不知道怎麼辦的事？」",
+            "「那個人平常都跟你聊些什麼？」",
+            "「好，我們先不談。你想說的時候，隨時都可以。」"],
+       bad:["避免：「你為什麼不早說？」「我不是跟你說過了？」",
+            "避免引導式的問法：「他是不是碰你了？」「你是不是傳照片給他？」",
+            "避免連續追問，問到孩子答不出來為止"]},
+      {h:"孩子開口時，怎麼回應",
+       p:["孩子說出口通常很不容易。你當下的反應，會決定他之後還會不會說。"],
+       list:["聽：放下手邊的事，讓孩子用自己的話說完，不打斷、不補充、不糾正",
+             "穩：驚訝、生氣都先收著，語氣放慢",
+             "肯定：讓孩子聽到你相信他，而且這不是他的錯",
+             "不亂承諾：不要說「我保證沒有人會知道」。可以說你會想辦法讓他安全，也需要讓能幫忙的人知道",
+             "記：事後盡快把孩子的話寫下來，盡量用他原本的用詞，並記下時間",
+             "通報或諮詢：打 113 或向性影像處理中心諮詢，請專業人員協助下一步"],
+       say:["「謝謝你告訴我，我相信你。」",
+            "「這不是你的錯，是對方做錯事。」",
+            "「你很勇敢。接下來我會陪著你。」"],
+       bad:["避免：「你怎麼現在才說？」「真的假的？你會不會想太多？」",
+            "避免當場說要去找對方算帳，孩子會怕你出事，之後不敢再說"],
+       p2:"孩子可能說到一半就停，或隔天改口說沒這回事。多半是羞愧或害怕後果，不代表說謊。繼續相信他、陪著他就好。"},
+      {h:"好秘密與壞秘密",
+       p:["性誘騙和性勒索都靠「不准說」運作。年紀小的孩子很難自己判斷哪個秘密不能守，所以要給他一個簡單、好記的規則。"],
+       list:["好秘密：很快就會揭曉、大家知道了會開心，例如生日驚喜、準備禮物",
+             "壞秘密：要你瞞著爸媽、讓你不舒服、害怕或困惑，或對方說「說出去你會有麻煩」",
+             "不確定算哪一種，就來問我",
+             "最重要的一條：沒有任何秘密糟糕到不能告訴我"],
+       say:["「好秘密會讓人想笑，壞秘密會讓你肚子怪怪的。只要你覺得怪怪的，就來告訴我，我不會罵你。」"]},
+      {h:"網路上的壞秘密長什麼樣子",
+       list:["要你刪掉對話，或不要讓爸媽看到",
+             "要你換到別的 App 或私訊平台聊",
+             "收了點數、禮物或錢之後，說「不要跟別人講」",
+             "說「你傳給我，我就不會告訴別人」，或其他「只有我們知道的約定」"],
+       p2:"青少年已經分得出來，可以直接說：「有人叫你別讓大人知道的事，通常就是大人需要知道的事。」"}
+    ],
+    res:["r113","siarc","w885"]
   },
 
   /* ===== 已經處理過了：事後單元 ===== */
@@ -311,6 +467,7 @@ var N = {
     items:[
       {go:"talkagain",t:"事後怎麼跟孩子重新談這件事",s:"什麼時候談、說什麼、孩子自責或不想談時怎麼辦"},
       {go:"talk",t:"跟孩子談性與網路安全",s:"青春期的性（男孩、女孩）、詐財型性勒索怎麼跟孩子談"},
+      {go:"comm",t:"溝通技巧：怎麼問、怎麼接、秘密怎麼分",s:"問而不審問、孩子開口時怎麼回應、好秘密與壞秘密"},
       {go:"watch",t:"復原期要留意的訊號",s:"哪些反應是正常的，哪些需要找專業協助"},
       {go:"process",t:"接下來的調查與司法流程",s:"警察、社工還會做什麼，為什麼可能很久沒有消息"},
       {go:"again",t:"對方又來聯繫，或有人說能付費刪影像",s:"常見的第二波詐騙，以及怎麼應對"}
@@ -321,6 +478,7 @@ var N = {
   talkagain:{
     type:"guide", tag:"事後單元", title:"事後怎麼跟孩子重新談這件事",
     lead:"不需要一次談完，也不需要問出所有細節。目標只有一個：讓孩子知道，這件事沒有改變你對他的看法。",
+    more:{go:"comm", t:"怎麼問而不審問、孩子開口怎麼回應、好秘密與壞秘密 →"},
     secs:[
       {h:"什麼時候談",
        p:["等孩子情緒稍微穩定，通常是事件後幾天到幾週。避開剛做完筆錄、剛被訪視的當天，孩子那時已經很累了。",
@@ -392,11 +550,12 @@ var N = {
 
   talk:{
     type:"menu", tag:"事後單元", title:"跟孩子談性與網路安全",
-    lead:"前兩頁是青春期的基本知識，家長不知道怎麼開口時，可以先從這裡看起。最後一頁針對詐財型性勒索。",
+    lead:"前兩頁是青春期的基本知識，家長不知道怎麼開口時，可以先從這裡看起。第三頁針對詐財型性勒索，最後一頁是怎麼問、怎麼接的溝通技巧。",
     items:[
       {go:"boysbasic",t:"青春期的性：男孩",s:"身體與心理的變化、自慰、撞見時怎麼辦、色情內容、孩子問問題時"},
       {go:"girlsbasic",t:"青春期的性：女孩",s:"月經與身體變化、性好奇、交往中被要求影像、家長怎麼回應"},
-      {go:"boys",t:"詐財型性勒索：怎麼跟孩子談",s:"拆掉迷思、怎麼開口、孩子要知道的紅旗訊號"}
+      {go:"boys",t:"詐財型性勒索：怎麼跟孩子談",s:"拆掉迷思、怎麼開口、孩子要知道的紅旗訊號"},
+      {go:"comm",t:"溝通技巧：怎麼問、怎麼接、秘密怎麼分",s:"問而不審問、孩子開口時怎麼回應、好秘密與壞秘密"}
     ]
   },
 
@@ -550,8 +709,20 @@ var N = {
        p:["不要迴避，也不要說「不要亂講」。可以直接問：「你是不是有想過要傷害自己？」直接問並不會增加孩子傷害自己的念頭。孩子聽到你問，才知道這件事可以說出口。",
           "有任何自傷的言語或行為，請立即撥打 1925 安心專線，或 119、110。"]},
       {h:"可以去哪裡找心理支持",
-       p:["可以向負責你們的社工提出，由縣市政府評估轉介心理諮商；也可以找學校輔導室。家長自己需要說話時，1925 安心專線是 24 小時。"]}
+       p:["可以向負責你們的社工提出，由縣市政府評估轉介心理諮商；也可以找學校輔導室。家長自己需要說話時，1925 安心專線是 24 小時。"]},
+      {h:"孩子開始願意說的時候",
+       p:["復原期，孩子常在很突然的時間丟出一句話，例如睡前、坐車、洗澡時。這時先放下手邊的事。"],
+       list:["先聽完，不急著糾正或追問",
+             "用一句話肯定他說出口",
+             "不承諾做不到的事，例如「保證沒有人會知道」"],
+       say:["「謝謝你告訴我，我相信你。」"]},
+      {h:"好秘密與壞秘密",
+       p:["勒索和性誘騙都靠「不准說」。復原期是把規則重新說清楚的好時機。"],
+       list:["好秘密：很快會揭曉、讓人開心，例如驚喜派對",
+             "壞秘密：要你瞞著爸媽、讓你不舒服或害怕，或對方說「說出去你會有麻煩」",
+             "規則只有一條：沒有任何秘密糟糕到不能告訴我"]}
     ],
+    more:{go:"comm", t:"怎麼問而不審問、孩子開口怎麼回應、好秘密與壞秘密完整版 →"},
     res:["r1925","r119","r113"]
   },
 
@@ -601,6 +772,55 @@ var checks = {};
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 
+/* 內文用：先跳脫，再把【待確認…】標成黃底 */
+function tx(s){return esc(s).replace(/【待確認[^】]*】/g,'<mark class="tbc">$&</mark>');}
+
+function moreBtns(m){
+  if(!m) return "";
+  var a = Array.isArray(m) ? m : [m], h = "";
+  a.forEach(function(x){ h += '<button class="linkbtn no-print" data-go="'+x.go+'">'+esc(x.t)+'</button>'; });
+  return h;
+}
+
+function secHTML(s){
+  var h = '<div class="sec"><h3>'+esc(s.h)+'</h3>';
+  (s.p||[]).forEach(function(x){ h += '<p>'+tx(x)+'</p>'; });
+  if(s.list){ h += '<ul>'; s.list.forEach(function(x){ h += '<li>'+tx(x)+'</li>'; }); h += '</ul>'; }
+  if(s.say){ h += '<div class="quote">'; s.say.forEach(function(x){ h += '<p>'+tx(x)+'</p>'; }); h += '</div>'; }
+  if(s.bad){ h += '<div class="bad">'; s.bad.forEach(function(x){ h += '<p>・'+tx(x)+'</p>'; }); h += '</div>'; }
+  if(s.p2) h += '<p class="note">'+tx(s.p2)+'</p>';
+  return h + '</div>';
+}
+
+/* 性誘騙檢核：依勾選數量更新提示（只存在畫面上，不儲存） */
+function updateSum(){
+  var el = document.getElementById("gsum"); if(!el) return;
+  var n = 0, hi = 0, per = {};
+  Array.prototype.forEach.call(app.querySelectorAll('input[data-sign]'), function(b){
+    if(!b.checked) return;
+    n++; if(b.dataset.hi === "1") hi++;
+    per[b.dataset.sign] = (per[b.dataset.sign] || 0) + 1;
+  });
+  Array.prototype.forEach.call(app.querySelectorAll('[data-cnt]'), function(s){
+    var k = per[s.dataset.cnt];
+    s.textContent = k ? "（已勾 " + k + " 項）" : "";
+  });
+  var cls = "gsum", h = "";
+  if(!n){
+    h = '<p>勾選你看到的情況，這裡會給你下一步的建議。沒有勾到，也不代表一定安全。</p>';
+  } else if(hi){
+    cls += " hot";
+    h = '<p><b>出現了性話題、要求影像或要求保密的跡象。</b>建議不要等，儘快打 113 或向性影像處理中心諮詢，並依下面的步驟保全證據。</p>'+
+        '<p>如果孩子已經傳過影像，或已經被威脅：</p>'+
+        '<button class="btn" data-go="type">看對應的行動指引</button>';
+  } else if(n >= 3){
+    h = '<p><b>同時出現多項警訊。</b>先不質問孩子，開始保全證據，並安排時間和孩子談一談。可以先打 113 或向性影像處理中心諮詢。</p>';
+  } else {
+    h = '<p><b>目前是零星的警訊，不一定有事。</b>先留意有沒有增加，同時讓孩子知道，有什麼事都可以跟你說。</p>';
+  }
+  el.className = cls; el.innerHTML = h;
+}
+
 function resItem(id){
   var r = RES[id]; if(!r) return "";
   var acts = "";
@@ -638,10 +858,11 @@ function render(id){
     h += '<div class="card">'+
       '<span class="step-tag">給家長的行動指引</span>'+
       '<h1>孩子的性影像被散布、被威脅，<br>現在該怎麼辦？</h1>'+
-      '<p>剛發現或已經報案都可以用。這裡整理了現在能做的事、要避免的事，以及可以找誰。</p>'+
+      '<p>剛發現、已經報案，或只是覺得哪裡怪怪的，都可以用。這裡整理了現在能做的事、要避免的事，以及可以找誰。</p>'+
       '<p><b>先記住一件事：這不是孩子的錯。</b>錯的是散布、威脅、索取影像的人。</p>'+
       '</div>'+
       '<button class="door hot" data-go="safety"><b>正在發生，需要現在處理</b><span>剛發現、還沒報案或還沒申訴下架，一步一步帶你確認狀況</span></button>'+
+      '<button class="door" data-go="groom"><b>覺得怪怪的，但還沒發生</b><span>有人對孩子特別好、特別黏，或孩子的行為讓你不安。看懂性誘騙（grooming）的警訊與下一步</span></button>'+
       '<button class="door" data-go="after"><b>已經處理過了，接下來呢？</b><span>事後怎麼跟孩子談、跟男孩談性與網路安全、復原期觀察、司法流程</span></button>'+
       '<div class="card"><h3>關於這份指引</h3>'+
       '<p class="note">這個頁面不會記錄你的任何選擇，也不會傳送資料。右上角「快速離開」可立即跳離本頁。</p>'+
@@ -688,11 +909,13 @@ function render(id){
     });
     h += '</ol></div>';
 
+    if(n.extra){ h += '<div class="card">'; n.extra.forEach(function(s){ h += secHTML(s); }); h += '</div>'; }
+
     h += '<div class="dont"><h3>先不要這樣做</h3><ul>';
     n.dont.forEach(function(d){ h += '<li>'+esc(d)+'</li>'; });
     h += '</ul></div>';
 
-    if(n.more) h += '<button class="linkbtn no-print" data-go="'+n.more.go+'">'+esc(n.more.t)+'</button>';
+    h += moreBtns(n.more);
 
     h += '<div class="card"><h2>可以找誰幫忙</h2><div class="res">';
     n.res.forEach(function(r){ h += resItem(r); });
@@ -704,6 +927,56 @@ function render(id){
       '<button class="btn" data-act="print">列印或存成 PDF</button>'+
       '<button class="btn ghost" data-go="type">看其他狀況</button>'+
       '<button class="btn ghost" data-act="restart">重新開始</button></div>';
+  }
+
+  else if(n.type === "groom"){
+    h += '<div class="card"><span class="step-tag">'+esc(n.tag)+'</span><h2>'+esc(n.title)+'</h2><p class="lead">'+esc(n.lead)+'</p></div>';
+    h += '<button class="linkbtn no-print" data-go="urgent">孩子現在有立即的危險？先看這裡 →</button>';
+
+    h += '<div class="card"><h2>先弄清楚：什麼是性誘騙（grooming）</h2>';
+    n.define.forEach(function(x){ h += '<p>'+tx(x)+'</p>'; });
+    h += '</div>';
+
+    h += '<div class="card"><h2>逐項檢核</h2><p class="lead">點開每個階段，勾選你看到的情況。不用全部看完，這個頁面不會記錄你的選擇。</p>';
+    n.stages.forEach(function(s){
+      h += '<details><summary><span class="sn">'+esc(s.n)+'</span>'+esc(s.h)+' <span class="cnt" data-cnt="'+esc(s.n)+'"></span></summary><p>'+tx(s.d)+'</p>';
+      [["real","現實生活中"],["net","網路上"]].forEach(function(g){
+        if(!s[g[0]]) return;
+        h += '<p class="gl">'+g[1]+'</p><ul class="chk">';
+        s[g[0]].forEach(function(it,i){
+          var key = "gs-"+s.n+g[0]+i, on = checks[key];
+          h += '<li class="'+(on?"done":"")+'"><input type="checkbox" data-key="'+key+'" data-sign="'+esc(s.n)+'"'+(it[1]?' data-hi="1"':'')+(on?' checked':'')+' aria-label="'+esc(it[0])+'"><div class="txt">'+tx(it[0])+'</div></li>';
+        });
+        h += '</ul>';
+      });
+      h += '</details>';
+    });
+    h += '</div>';
+
+    h += '<div class="gsum" id="gsum" role="status"></div>';
+
+    h += '<div class="card"><h2>接下來可以做</h2><ol class="todo">';
+    n.steps.forEach(function(t,i){
+      var key = "gst-"+i, on = checks[key];
+      h += '<li class="'+(on?"done":"")+'"><input type="checkbox" data-key="'+key+'" '+(on?"checked":"")+' aria-label="'+esc(t[0])+'">'+
+           '<div class="txt"><b><span class="n"></span>'+tx(t[0])+'</b><small>'+tx(t[1])+'</small></div></li>';
+    });
+    h += '</ol></div>';
+
+    h += '<div class="dont"><h3>先不要這樣做</h3><ul>';
+    n.dont.forEach(function(d){ h += '<li>'+tx(d)+'</li>'; });
+    h += '</ul></div>';
+
+    h += moreBtns(n.more);
+
+    h += '<div class="card"><h2>可以找誰幫忙</h2><div class="res">';
+    n.res.forEach(function(r){ h += resItem(r); });
+    h += '</div></div>';
+
+    h += '<div class="nav no-print">'+
+      '<button class="btn" data-act="print">列印或存成 PDF</button>'+
+      (stack.length?'<button class="btn ghost" data-act="back">上一頁</button>':'')+
+      '<button class="btn ghost" data-act="restart">回首頁</button></div>';
   }
 
   else if(n.type === "menu"){
@@ -731,17 +1004,9 @@ function render(id){
 
   else if(n.type === "guide"){
     h += '<div class="card"><span class="step-tag">'+esc(n.tag)+'</span><h2>'+esc(n.title)+'</h2><p class="lead">'+esc(n.lead)+'</p></div>';
-    if(n.more) h += '<button class="linkbtn no-print" data-go="'+n.more.go+'">'+esc(n.more.t)+'</button>';
+    h += moreBtns(n.more);
     h += '<div class="card">';
-    n.secs.forEach(function(s){
-      h += '<div class="sec"><h3>'+esc(s.h)+'</h3>';
-      (s.p||[]).forEach(function(x){ h += '<p>'+esc(x)+'</p>'; });
-      if(s.list){ h += '<ul>'; s.list.forEach(function(x){ h += '<li>'+esc(x)+'</li>'; }); h += '</ul>'; }
-      if(s.say){ h += '<div class="quote">'; s.say.forEach(function(x){ h += '<p>'+esc(x)+'</p>'; }); h += '</div>'; }
-      if(s.bad){ h += '<div class="bad">'; s.bad.forEach(function(x){ h += '<p>・'+esc(x)+'</p>'; }); h += '</div>'; }
-      if(s.p2) h += '<p class="note">'+esc(s.p2)+'</p>';
-      h += '</div>';
-    });
+    n.secs.forEach(function(s){ h += secHTML(s); });
     h += '</div>';
     if(n.res){
       h += '<div class="card"><h2>可以找誰幫忙</h2><div class="res">';
@@ -755,8 +1020,9 @@ function render(id){
       '<button class="btn ghost" data-act="restart">回首頁</button></div>';
   }
 
-  h += '<p class="foot">資源資訊查核：2026 年 10 月<br>本指引為一般性資訊，不取代專業人員的個別評估<br>張博鈞 製作 · 僅供非營利教育使用</p>';
+  h += '<p class="foot">資源資訊查核：2026 年 10 月<br>本指引為一般性資訊，不取代專業人員的個別評估<br>性誘騙警訊與溝通技巧參考：Bravehearts, Parents &amp; Carers Guide, 10th ed.（2025）；五階段原出自 Winters &amp; Jeglic（2022）。內容由作者改寫，並依台灣情境調整，非官方翻譯<br>張博鈞 製作 · 僅供非營利教育使用</p>';
   app.innerHTML = h;
+  if(n.type === "groom") updateSum();
   var first = app.querySelector("h1,h2");
   if(first){ first.setAttribute("tabindex","-1"); first.focus({preventScroll:true}); }
 }
@@ -779,6 +1045,7 @@ app.addEventListener("change", function(e){
   if(c.matches('input[type="checkbox"][data-key]')){
     checks[c.dataset.key] = c.checked;
     c.closest("li").classList.toggle("done", c.checked);
+    if(c.dataset.sign) updateSum();
   }
 });
 

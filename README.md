@@ -1,12 +1,21 @@
-# parent-next-step
-先接住，再處理
+# 先接住，再處理
 
 孩子的性影像被散布、被拿來威脅時，給家長看的行動指引。
 
-開啟網址：https://10033641tycg.github.io/parent-next-step/
+## 🔗 網址
 
-<p align="center"><a href="https://10033641tycg.github.io/parent-next-step/"><img src="qrcode.png" width="240" alt="parent-next-step QR code"></a></p>
+開啟網址：https://stop-dsv-tw.github.io/parent-next-step/
+
+<p align="center"><a href="https://stop-dsv-tw.github.io/parent-next-step/"><img src="qrcode.png" width="240" alt="parent-next-step QR code"></a></p>
 <p align="center">用手機掃描 QR code 即可開啟</p>
+
+## 適用對象
+
+適用對象為未滿 18 歲兒少的家長或主要照顧者。
+
+## 使用方式
+
+用手機掃描 QR code 或直接開啟網址即可，不需要安裝任何程式。也可以下載 index.html，在電腦上用瀏覽器直接開啟，離線也能使用（撥號與外部連結需要網路）。
 
 這個工具在做什麼
 
@@ -32,17 +41,18 @@
 
 每個頁面都可以列印或存成 PDF。
 
-使用方式
-
-用手機掃描 QR code 或直接開啟網址即可，不需要安裝任何程式。也可以下載 index.html，在電腦上用瀏覽器直接開啟，離線也能使用（撥號與外部連結需要網路）。
-
-適用對象為未滿 18 歲兒少的家長或主要照顧者。
-
 隱私
 不收集、不儲存、不傳送任何資料，關掉頁面後所有勾選紀錄都會清除
 沒有使用任何追蹤或分析工具
 右上角的「快速離開」或鍵盤 Esc 鍵，可以立即跳離到 Google 首頁
 網址刻意使用中性名稱，避免家中其他人從瀏覽紀錄看出內容
+
+技術說明
+
+單一 HTML 檔案，沒有外部相依套件，透過 GitHub Pages 發布。修改內容時，文字資料集中在 index.html 的 <script> 區塊內：RES 是求助資源，N 是各頁面內容。
+
+## 內容來源與案例說明
+
 求助資源
 
 工具中列出的資源如下，資訊查核日期為 2026 年 10 月。
@@ -63,12 +73,20 @@ Take It Down	https://takeitdown.ncmec.org/	線上
 
 本工具內容依兒少保護實務經驗整理，屬一般性資訊，不取代社工、警察、法律或心理專業人員的個別評估。個別案件請聯繫負責的社工或上列單位。
 
-技術說明
+性誘騙警訊與溝通技巧參考：Bravehearts, Parents & Carers Guide, 10th ed.（2025）；五階段原出自 Winters & Jeglic（2022）。內容由作者改寫，並依台灣情境調整，非官方翻譯
 
-單一 HTML 檔案，沒有外部相依套件，透過 GitHub Pages 發布。修改內容時，文字資料集中在 index.html 的 <script> 區塊內：RES 是求助資源，N 是各頁面內容。
+## 聲明
 
-著作權
+本工具為個人製作，不代表任何機關立場。
 
-製作：張博鈞　© 2026 張博鈞　保留著作權利
+## 關於帳號名稱
 
-個人製作之家長指引，非任何機關之正式文件。僅供非營利教育使用，歡迎分享連結，請勿移除署名、修改後以他人名義發布，或作任何商業用途。
+帳號名稱 stop-dsv-tw 中的 DSV 為數位性暴力（Digital Sexual Violence）。
+
+## 授權
+
+製作：張博鈞
+
+© 2026 張博鈞，採 CC BY-NC 4.0 授權：可自由分享與改作，需標示作者、不得商業使用。
+
+法律條款全文：[LICENSE](LICENSE)

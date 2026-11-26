@@ -5,6 +5,9 @@
 
 開啟網址：https://10033641tycg.github.io/parent-next-step/
 
+<p align="center"><a href="https://10033641tycg.github.io/parent-next-step/"><img src="qrcode.png" width="240" alt="parent-next-step QR code"></a></p>
+<p align="center">用手機掃描 QR code 即可開啟</p>
+
 這個工具在做什麼
 
 家長遇到這類事件時，常常不知道先做什麼，也容易在慌亂中做出讓情況更糟的決定，例如責罵孩子、替孩子付錢、把影像轉給別人「求證」。這個工具用幾個簡單的問題確認狀況，再依情況列出現在可以做的事、要避免的事，以及可以聯繫的單位。
